@@ -1,8 +1,12 @@
-function loadProfile() {
+async function loadProfile() {
 
     if (!requireLogin()) return;
 
-    const username = getCurrentUser();
+    const requestedUser =
+        new URLSearchParams(window.location.search).get("user");
+
+    const username = requestedUser || getCurrentUser();
+    const currentUser = getCurrentUser();
 
     const users = getUsers();
 
@@ -24,6 +28,28 @@ function loadProfile() {
 
     if (bioElement) {
         bioElement.textContent = user.bio;
+    }
+
+    const editButton = document.getElementById("editProfileButton");
+    const followButton = document.getElementById("profileFollowButton");
+    const profileMessageLink = document.getElementById("profileMessageLink");
+
+    if (editButton) {
+        editButton.hidden = username !== currentUser;
+    }
+
+    if (followButton) {
+        followButton.hidden = username === currentUser;
+        followButton.textContent = isFollowing(username) ? "Following" : "Follow";
+        followButton.onclick = () => {
+            toggleFollow(username);
+            loadProfile();
+        };
+    }
+
+    if (profileMessageLink) {
+        profileMessageLink.hidden = username === currentUser;
+        profileMessageLink.href = `messages.html?to=${encodeURIComponent(username)}`;
     }
 
     const posts = getPosts().filter(
@@ -63,6 +89,64 @@ function loadProfile() {
 
         profilePosts.appendChild(div);
     });
+
+    const profileReels = document.getElementById("profileReels");
+
+    if (!profileReels) return;
+
+    profileReels.innerHTML = "";
+
+    const uploadedReels = await getUploadedProfileReels();
+    const userReels = uploadedReels.filter(reel => reel.username === username);
+
+    userReels.forEach(reel => {
+        const reelElement = document.createElement("div");
+        reelElement.className = "profile-reel";
+        reelElement.innerHTML = `
+            <video src="${reel.video}" controls muted playsinline></video>
+            <p>${escapeProfileText(reel.caption)}</p>
+        `;
+        profileReels.appendChild(reelElement);
+    });
+}
+
+function getUploadedProfileReels() {
+    return new Promise(resolve => {
+        const request = indexedDB.open("waveReelsDatabase", 1);
+
+        request.onupgradeneeded = () => {
+            request.result.createObjectStore("reels", { keyPath: "id" });
+        };
+
+        request.onsuccess = () => {
+            const database = request.result;
+            const readRequest = database
+                .transaction("reels", "readonly")
+                .objectStore("reels")
+                .getAll();
+
+            readRequest.onsuccess = () => {
+                database.close();
+                resolve(readRequest.result.map(reel => ({
+                    ...reel,
+                    video: URL.createObjectURL(reel.video)
+                })));
+            };
+
+            readRequest.onerror = () => {
+                database.close();
+                resolve([]);
+            };
+        };
+
+        request.onerror = () => resolve([]);
+    });
+}
+
+function escapeProfileText(text) {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 

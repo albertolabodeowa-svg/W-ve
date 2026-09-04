@@ -511,6 +511,33 @@ button {
     overflow: hidden;
 }
 
+.profile-section-title {
+    margin: 25px 0 12px;
+}
+
+.profile-reels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.profile-reel {
+    overflow: hidden;
+    background: #eee;
+}
+
+.profile-reel video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+.profile-reel p {
+    padding: 8px;
+    font-size: 12px;
+}
+
 
 /* =========================
    MESSAGES
@@ -645,6 +672,10 @@ button {
     display: block;
 }
 
+.user-result-info a {
+    color: inherit;
+}
+
 .user-result-info small {
     margin-top: 3px;
     color: #777;
@@ -663,6 +694,12 @@ button {
 
 .message-button {
     font-size: 20px;
+}
+
+.current-user-label {
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .empty-users {

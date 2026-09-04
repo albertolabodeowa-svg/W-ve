@@ -66,9 +66,17 @@
             </p>
 
 
-            <button onclick="editProfile()">
+            <button id="editProfileButton" onclick="editProfile()">
                 Edit Profile
             </button>
+
+            <button id="profileFollowButton" hidden>
+                Follow
+            </button>
+
+            <a id="profileMessageLink" href="messages.html" hidden>
+                Message
+            </a>
 
 
             <button onclick="logout()">
@@ -128,6 +136,13 @@
     <section
         id="profilePosts"
         class="post-grid"
+    ></section>
+
+    <h3 class="profile-section-title">Reels</h3>
+
+    <section
+        id="profileReels"
+        class="profile-reels"
     ></section>
 
 

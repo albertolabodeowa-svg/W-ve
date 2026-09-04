@@ -6,7 +6,7 @@ function searchUsers() {
 
     const search = input.value.toLowerCase().trim();
     const currentUser = getCurrentUser();
-    const users = getUsers().filter(user => user.username !== currentUser);
+    const users = getUsers();
     const matchingUsers = search
         ? users.filter(user => user.username.toLowerCase().includes(search))
         : users;
@@ -26,12 +26,16 @@ function searchUsers() {
         card.innerHTML = `
             <div class="user-result-avatar">👤</div>
             <div class="user-result-info">
-                <strong>${escapeHTML(user.username)}</strong>
+                <a href="profile.html?user=${encodeURIComponent(user.username)}">
+                    <strong>${escapeHTML(user.username)}</strong>
+                </a>
                 <small>${escapeHTML(user.bio || "Welcome to my WAVE profile.")}</small>
             </div>
-            <button class="follow-button" onclick="followUser('${escapeAttribute(user.username)}')">
-                ${following ? "Following" : "Follow"}
-            </button>
+            ${user.username === currentUser ? "<span class=\"current-user-label\">You</span>" : `
+                <button class="follow-button" onclick="followUser('${escapeAttribute(user.username)}')">
+                    ${following ? "Following" : "Follow"}
+                </button>
+            `}
             <a class="message-button" href="messages.html?to=${encodeURIComponent(user.username)}" title="Message ${escapeAttribute(user.username)}">💬</a>
         `;
 
