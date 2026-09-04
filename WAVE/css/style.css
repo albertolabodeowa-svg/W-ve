@@ -1,0 +1,1220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #262626;
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 60px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.navbar input {
+    width: 270px;
+
+    background: #efefef;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.navbar nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    font-size: 23px;
+}
+
+.navbar nav a,
+#themeButton {
+    transition: transform 0.2s;
+}
+
+.navbar nav a:hover,
+#themeButton:hover {
+    transform: scale(1.15);
+}
+
+#themeButton {
+    font-size: 21px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+
+    max-width: 630px;
+
+    margin: 25px auto;
+
+    padding: 0 10px;
+}
+
+
+/* =========================
+   STORIES
+========================= */
+
+.stories {
+    background: white;
+
+    border: 1px solid #dbdbdb;
+
+    padding: 16px;
+
+    display: flex;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.story {
+    min-width: 64px;
+
+    height: 64px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #eee;
+
+    border: 3px solid #d62976;
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+}
+
+.add-story {
+    border: 2px solid #ccc;
+
+    font-size: 32px;
+
+    color: #555;
+}
+
+
+/* =========================
+   CREATE POST
+========================= */
+
+.create-post {
+    background: white;
+
+    border: 1px solid #dbdbdb;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.mini-profile {
+    width: 40px;
+
+    height: 40px;
+
+    background: #eee;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.create-post input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+}
+
+.create-post button {
+    color: #0095f6;
+
+    font-weight: bold;
+
+    padding: 8px;
+}
+
+
+/* =========================
+   POST
+========================= */
+
+.post {
+    background: white;
+
+    border: 1px solid #dbdbdb;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 15px;
+}
+
+.post-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.post-avatar {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.post-user strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.post-user small {
+    color: #888;
+
+    font-size: 11px;
+
+    display: block;
+
+    margin-top: 3px;
+}
+
+.delete-button {
+    font-size: 24px;
+
+    padding: 5px;
+}
+
+
+/* =========================
+   POST CONTENT
+========================= */
+
+.post-content {
+    padding: 25px 18px;
+
+    min-height: 130px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.post-content p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   POST ACTIONS
+========================= */
+
+.post-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 10px 15px;
+
+    border-top: 1px solid #eee;
+}
+
+.post-actions button {
+    font-size: 22px;
+
+    transition: transform 0.2s;
+}
+
+.post-actions button:hover {
+    transform: scale(1.12);
+}
+
+.post-actions button:first-child {
+    font-size: 16px;
+}
+
+.post-actions .liked {
+    color: #ed4956;
+}
+
+.save-button {
+    margin-left: auto;
+}
+
+
+/* =========================
+   CAPTION
+========================= */
+
+.post-caption {
+    padding: 0 15px 15px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.post-caption strong {
+    margin-right: 5px;
+}
+
+
+/* =========================
+   EMPTY FEED
+========================= */
+
+.empty-feed {
+    background: white;
+
+    border: 1px solid #dbdbdb;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.empty-feed h2 {
+    margin-bottom: 10px;
+}
+
+.empty-feed p {
+    color: #777;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-container {
+    max-width: 900px;
+
+    margin: 40px auto;
+}
+
+.profile-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-picture {
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 65px;
+}
+
+.profile-info h2 {
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+}
+
+.profile-stats {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin: 30px 0;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.profile-stats div {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.post-comments {
+    padding: 0 15px 12px;
+}
+
+.post-comments p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.post-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 4px;
+}
+
+.post-grid div {
+    min-height: 200px;
+
+    background: #eee;
+
+    padding: 15px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.messages-container {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.message {
+    padding: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.message-input {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.recipient-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.recipient-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.recipient-input button,
+.message-input button {
+    padding: 0 14px;
+    color: #0095f6;
+    font-weight: bold;
+}
+
+.empty-messages {
+    padding: 15px 0;
+    color: #777;
+}
+
+.message-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    outline: none;
+}
+
+
+/* =========================
+   EXPLORE
+========================= */
+
+.explore-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 4px;
+
+    margin-top: 20px;
+}
+
+.people-search {
+    margin-top: 20px;
+}
+
+.people-search input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    outline: none;
+}
+
+.user-results {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.user-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+}
+
+.user-result-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.user-result-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.user-result-info strong,
+.user-result-info small {
+    display: block;
+}
+
+.user-result-info small {
+    margin-top: 3px;
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.follow-button,
+.message-button {
+    padding: 8px 10px;
+    color: #0095f6;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.message-button {
+    font-size: 20px;
+}
+
+.empty-users {
+    color: #777;
+    padding: 10px 0;
+}
+
+.explore-grid div {
+    height: 220px;
+
+    background: #eee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 60px;
+}
+
+
+/* =========================
+   REELS
+========================= */
+
+.reels-container {
+    max-width: 500px;
+
+    margin: 30px auto;
+}
+
+.reel {
+    background: white;
+
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.reel-content {
+    height: 500px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 100px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #000;
+
+    color: #f5f5f5;
+}
+
+.dark .navbar {
+    background: #000;
+
+    border-color: #262626;
+}
+
+.dark .navbar input {
+    background: #262626;
+
+    color: white;
+}
+
+.dark .stories,
+.dark .create-post,
+.dark .post,
+.dark .empty-feed,
+.dark .profile-stats,
+.dark .messages-container,
+.dark .reel {
+    background: #000;
+
+    border-color: #262626;
+}
+
+.dark .post-actions {
+    border-color: #262626;
+}
+
+.dark .post-content {
+    color: white;
+}
+
+.dark .post-avatar,
+.dark .mini-profile,
+.dark .story,
+.dark .profile-picture {
+    background: #262626;
+}
+
+.dark .post-user small,
+.dark .empty-feed p {
+    color: #aaa;
+}
+
+.dark .profile-container {
+    color: white;
+}
+
+.dark input {
+    color: white;
+}
+
+.dark .profile-info {
+    color: white;
+}
+
+.dark .post-grid div,
+.dark .explore-grid div {
+    background: #262626;
+}
+/* ==========================================
+   WAVE REELS
+========================================== */
+
+.reels-page {
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    display: flex;
+    justify-content: center;
+
+    background: #000;
+
+    overflow-y: auto;
+
+    scroll-snap-type: y mandatory;
+}
+
+.reel-uploader {
+    position: fixed;
+    top: 78px;
+    left: 24px;
+    width: min(330px, calc(100vw - 48px));
+    padding: 18px;
+    color: white;
+    background: rgba(20, 20, 20, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    z-index: 20;
+}
+
+.reel-uploader h1 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.reel-uploader p {
+    margin: 0 0 14px;
+    color: #cfcfcf;
+    font-size: 13px;
+}
+
+#reelUploadForm {
+    display: grid;
+    gap: 10px;
+}
+
+.reel-file-label,
+#reelCaptionInput,
+#reelUploadForm button {
+    min-height: 42px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font: inherit;
+}
+
+.reel-file-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #eee;
+    background: #292929;
+}
+
+.reel-file-label input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#reelCaptionInput {
+    width: 100%;
+    color: #111;
+    background: white;
+}
+
+#reelUploadForm button {
+    border-color: #ff3040;
+    color: white;
+    background: #ff3040;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#reelUploadForm button:hover {
+    background: #e32030;
+}
+
+.reel-upload-status {
+    min-height: 16px;
+    margin: 0 !important;
+    color: #8ee6a5 !important;
+}
+
+
+/* REELS CONTAINER */
+
+#reelsContainer {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* REEL CARD */
+
+.reel-card {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    min-height: 600px;
+
+    background: #000;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+}
+
+
+/* VIDEO */
+
+.reel-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #000;
+}
+
+
+/* GRADIENT */
+
+.reel-gradient {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        );
+
+    pointer-events: none;
+}
+
+
+/* TOP BAR */
+
+.reel-top {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 70px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            transparent
+        );
+
+    z-index: 5;
+}
+
+
+.reel-top strong {
+    font-size: 18px;
+}
+
+
+.reel-top button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.45);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* REEL INFORMATION */
+
+.reel-info {
+    position: absolute;
+
+    left: 18px;
+    right: 90px;
+    bottom: 30px;
+
+    color: white;
+
+    z-index: 5;
+}
+
+
+/* USER */
+
+.reel-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.reel-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.reel-user strong {
+    font-size: 15px;
+}
+
+
+/* CAPTION */
+
+.reel-caption {
+    margin: 0;
+
+    line-height: 1.5;
+
+    font-size: 15px;
+}
+
+
+/* ACTIONS */
+
+.reel-actions {
+    position: absolute;
+
+    right: 15px;
+    bottom: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    z-index: 10;
+}
+
+
+.reel-action {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    font-size: 13px;
+
+    text-shadow: 0 2px 5px black;
+}
+
+
+.reel-action:hover {
+    transform: scale(1.1);
+}
+
+
+.reel-action span:first-child {
+    font-size: 28px;
+}
+
+
+.like-icon {
+    font-size: 30px;
+}
+
+
+.like-count {
+    font-size: 13px;
+}
+
+
+/* LIKED */
+
+.reel-action.liked {
+    color: #ff3040;
+}
+
+
+/* NO REELS */
+
+.no-reels {
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .reels-page {
+        height: calc(100vh - 55px);
+    }
+
+    .reel-uploader {
+        position: absolute;
+        top: 70px;
+        left: 12px;
+        width: calc(100vw - 24px);
+        box-sizing: border-box;
+    }
+
+
+    #reelsContainer {
+        max-width: 100%;
+    }
+
+
+    .reel-card {
+        height: calc(100vh - 55px);
+
+        min-height: 500px;
+    }
+
+
+    .reel-info {
+        bottom: 25px;
+        left: 15px;
+        right: 80px;
+    }
+
+
+    .reel-actions {
+        right: 10px;
+        bottom: 25px;
+    }
+
+}
+
+
+/* DARK MODE */
+
+body.dark .reels-page {
+    background: #000;
+}

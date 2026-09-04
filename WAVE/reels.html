@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WAVE Reels</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">WAVE</a>
+
+        <input
+            type="text"
+            id="reelSearch"
+            placeholder="Search"
+            autocomplete="off"
+        >
+
+        <nav>
+            <a href="index.html" title="Home">🏠</a>
+            <a href="explore.html" title="Explore">🔎</a>
+            <a href="reels.html" class="active" title="Reels">🎬</a>
+            <a href="messages.html" title="Messages">💬</a>
+            <a href="profile.html" title="Profile">👤</a>
+        </nav>
+
+    </header>
+
+
+    <!-- REELS -->
+    <main class="reels-page">
+
+        <section class="reel-uploader" aria-labelledby="reelUploaderTitle">
+            <div>
+                <h1 id="reelUploaderTitle">Share a reel</h1>
+                <p>Upload a video and share the moment.</p>
+            </div>
+
+            <form id="reelUploadForm">
+                <label class="reel-file-label" for="reelVideoInput">
+                    <span id="reelFileName">Choose a video</span>
+                    <input id="reelVideoInput" type="file" accept="video/*" required>
+                </label>
+                <input
+                    id="reelCaptionInput"
+                    type="text"
+                    placeholder="Write a caption"
+                    maxlength="220"
+                >
+                <button type="submit">Post reel</button>
+                <p id="reelUploadStatus" class="reel-upload-status" role="status"></p>
+            </form>
+        </section>
+
+        <div id="reelsContainer"></div>
+
+    </main>
+
+
+    <!-- REELS JAVASCRIPT -->
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/reels.js"></script>
+
+</body>
+</html>

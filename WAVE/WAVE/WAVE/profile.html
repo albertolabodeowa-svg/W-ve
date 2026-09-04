@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - WAVE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">WAVE</a>
+
+    <nav>
+        <a href="index.html">??</a>
+        <a href="explore.html">??</a>
+        <a href="reels.html">??</a>
+        <a href="messages.html">??</a>
+    </nav>
+</header>
+
+<main class="profile-container">
+
+    <div class="profile-header">
+
+        <div class="profile-picture">
+            ??
+        </div>
+
+        <div class="profile-info">
+            <h2 id="profileUsername">Username</h2>
+            <p id="profileBio">Welcome to my WAVE profile.</p>
+
+            <button onclick="editProfile()">Edit Profile</button>
+            <button onclick="logout()">Log Out</button>
+        </div>
+
+    </div>
+
+    <div class="profile-stats">
+        <div><strong id="postCount">0</strong><span>Posts</span></div>
+        <div><strong>0</strong><span>Followers</span></div>
+        <div><strong>0</strong><span>Following</span></div>
+    </div>
+
+    <section id="profilePosts" class="post-grid"></section>
+
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

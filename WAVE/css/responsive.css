@@ -1,0 +1,116 @@
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 12px;
+
+        height: 58px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar input {
+        width: 120px;
+
+        padding: 8px 10px;
+    }
+
+    .navbar nav {
+        gap: 12px;
+
+        font-size: 18px;
+    }
+
+    #themeButton {
+        font-size: 18px;
+    }
+
+
+    .container {
+        width: 100%;
+
+        padding: 0 5px;
+
+        margin-top: 10px;
+    }
+
+
+    .stories {
+        border-radius: 0;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+
+    .create-post {
+        border-radius: 0;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+
+    .post {
+        border-radius: 0;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+
+    .profile-container {
+        width: 95%;
+
+        margin: 25px auto;
+    }
+
+
+    .profile-header {
+        gap: 20px;
+    }
+
+
+    .profile-picture {
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 40px;
+    }
+
+
+    .post-grid div {
+        min-height: 110px;
+    }
+
+
+    .explore-grid div {
+        height: 120px;
+
+        font-size: 40px;
+    }
+
+
+    .reels-container {
+        width: 100%;
+    }
+
+
+    .reel {
+        border-radius: 0;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+
+    .reel-content {
+        height: 500px;
+    }
+}

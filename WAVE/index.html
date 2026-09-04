@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WAVE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            WAVE
+        </a>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search"
+            onkeyup="searchPosts()"
+        >
+
+        <nav>
+
+            <a href="index.html" title="Home">
+                🏠
+            </a>
+
+            <a href="explore.html" title="Explore">
+                🔎
+            </a>
+
+            <a href="reels.html" title="Reels">
+                🎬
+            </a>
+
+            <a href="messages.html" title="Messages">
+                💬
+            </a>
+
+            <a href="profile.html" title="Profile">
+                👤
+            </a>
+
+            <button
+                id="themeButton"
+                onclick="toggleTheme()"
+                title="Change theme"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <!-- STORIES -->
+
+        <section class="stories">
+
+            <div class="story add-story">
+                +
+            </div>
+
+            <div id="userStory" class="story">
+                👤
+            </div>
+
+        </section>
+
+
+        <!-- CREATE POST -->
+
+        <section class="create-post">
+
+            <div class="mini-profile">
+                👤
+            </div>
+
+            <input
+                type="text"
+                id="postInput"
+                placeholder="What's on your mind?"
+                maxlength="500"
+            >
+
+            <button onclick="createPost()">
+                Post
+            </button>
+
+        </section>
+
+
+        <!-- FEED -->
+
+        <section id="feed"></section>
+
+    </main>
+
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

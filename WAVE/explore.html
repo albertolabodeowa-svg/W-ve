@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Explore - WAVE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        WAVE
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">🏠</a>
+
+        <a href="reels.html">🎬</a>
+
+        <a href="messages.html">💬</a>
+
+        <a href="profile.html">👤</a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <h2>
+        Explore
+    </h2>
+
+    <div class="people-search">
+        <input
+            id="userSearchInput"
+            type="search"
+            placeholder="Search people"
+            oninput="searchUsers()"
+        >
+    </div>
+
+    <section id="userResults" class="user-results"></section>
+
+
+    <div class="explore-grid">
+
+        <div>🌄</div>
+
+        <div>🏖️</div>
+
+        <div>🏙️</div>
+
+        <div>🌳</div>
+
+        <div>🚗</div>
+
+        <div>🎮</div>
+
+        <div>🍔</div>
+
+        <div>⚽</div>
+
+        <div>🎵</div>
+
+    </div>
+
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/users.js"></script>
+<script>
+    requireLogin();
+</script>
+
+</body>
+
+</html>

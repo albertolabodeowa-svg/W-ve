@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Messages - WAVE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        WAVE
+    </a>
+
+    <nav>
+
+        <a href="index.html">🏠</a>
+
+        <a href="explore.html">🔍</a>
+
+        <a href="reels.html">🎬</a>
+
+        <a href="profile.html">👤</a>
+
+    </nav>
+
+</header>
+
+
+<main class="messages-container">
+
+    <h2>
+        <span id="messageTitle">Messages</span>
+    </h2>
+
+
+    <div id="messages">
+
+        <div class="message">
+
+            <strong>
+                WaveUser
+            </strong>
+
+            <p>
+                Welcome to WAVE 👋
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="recipient-input">
+        <input
+            id="recipientInput"
+            type="text"
+            placeholder="Username to message"
+        >
+        <button onclick="selectRecipient()">Open</button>
+    </div>
+
+
+    <div class="message-input">
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Write a message..."
+        >
+
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</main>
+
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/messages.js"></script>
+
+</body>
+
+</html>

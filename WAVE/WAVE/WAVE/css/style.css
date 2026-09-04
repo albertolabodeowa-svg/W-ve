@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+    font-size: 23px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.stories {
+    background: white;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.story {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border: 3px solid #777;
+}
+
+.add-story {
+    font-size: 30px;
+}
+
+.create-post {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.create-post input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+}
+
+.post {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post-header {
+    padding: 15px;
+    font-weight: bold;
+}
+
+.post-content {
+    padding: 25px;
+    font-size: 18px;
+    min-height: 100px;
+}
+
+.post-actions {
+    padding: 12px;
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #eee;
+}
+
+.post-actions button {
+    background: transparent;
+    color: #222;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.profile-stats div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.post-grid div {
+    min-height: 180px;
+    background: #ddd;
+    padding: 15px;
+}
+
+.messages-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.message {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.message-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 12px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.explore-grid div {
+    height: 200px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.reels-container {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.reel {
+    background: white;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.reel-content {
+    height: 500px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark .navbar,
+.dark .post,
+.dark .stories,
+.dark .create-post,
+.dark .profile-stats,
+.dark .messages-container,
+.dark .reel {
+    background: #222;
+    color: white;
+}
